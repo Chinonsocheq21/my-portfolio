@@ -2,10 +2,7 @@ import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons'
 
 export default function Footer() {
   return (
-    <footer style={{
-      padding: '2rem 6rem',
-      borderTop: '1px solid rgba(255,255,255,0.1)',
-    }}>
+    <footer className="footer-pad" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
       <div style={{
         maxWidth: '80rem',
         margin: '0 auto',

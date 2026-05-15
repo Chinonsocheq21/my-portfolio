@@ -64,7 +64,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   return (
-    <section id="experience" style={{ padding: '6rem 6rem', position: 'relative' }}>
+    <section id="experience" className="section-pad" style={{ position: 'relative' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <motion.div
           ref={ref}
@@ -85,7 +85,7 @@ export default function Experience() {
               className="liquid-glass"
               style={{ borderRadius: '1rem', padding: '2rem' }}
             >
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '1.5rem' }}>
+              <div className="grid-exp-card">
                 <div>
                   <div
                     className="liquid-glass-strong"

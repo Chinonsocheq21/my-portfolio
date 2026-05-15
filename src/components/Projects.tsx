@@ -72,7 +72,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           padding: '3rem',
         }}
       >
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'start' }}>
+        <div className="grid-featured-inner">
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <span className="section-badge" style={{ marginBottom: 0 }}>Featured Project</span>
@@ -238,7 +238,7 @@ export default function Projects() {
   const isHeaderInView = useInView(headerRef, { once: true })
 
   return (
-    <section id="projects" style={{ padding: '6rem 6rem', position: 'relative' }}>
+    <section id="projects" className="section-pad" style={{ position: 'relative' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <motion.div
           ref={headerRef}
@@ -260,7 +260,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+        <div className="grid-projects">
           {projects.map((project, i) => (
             <ProjectCard key={project.name} project={project} index={i} />
           ))}

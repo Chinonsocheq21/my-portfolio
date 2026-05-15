@@ -13,17 +13,9 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" style={{ padding: '6rem 6rem', position: 'relative' }}>
+    <section id="about" className="section-pad" style={{ position: 'relative' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-        <div
-          ref={ref}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '4rem',
-            alignItems: 'center',
-          }}
-        >
+        <div ref={ref} className="grid-about">
           {/* Left - Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

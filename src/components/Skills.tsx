@@ -44,7 +44,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   return (
-    <section id="skills" style={{ padding: '6rem 6rem', position: 'relative' }}>
+    <section id="skills" className="section-pad" style={{ position: 'relative' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <motion.div
           ref={ref}
@@ -55,7 +55,7 @@ export default function Skills() {
           <h2 className="section-heading" style={{ marginBottom: '3rem' }}>My Tech Stack</h2>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+        <div className="grid-skills">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}

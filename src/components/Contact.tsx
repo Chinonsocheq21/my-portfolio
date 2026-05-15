@@ -8,7 +8,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-50px' })
 
   return (
-    <section id="contact" style={{ padding: '8rem 6rem', position: 'relative', overflow: 'hidden' }}>
+    <section id="contact" className="contact-pad" style={{ position: 'relative', overflow: 'hidden' }}>
       {/* Background glow */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <div style={{
