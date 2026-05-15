@@ -41,20 +41,14 @@ export default function Hero() {
         }} />
       </div>
 
-      <div style={{
+      <div className="hero-container" style={{
         position: 'relative',
         zIndex: 10,
         maxWidth: '80rem',
         margin: '0 auto',
-        padding: '5rem 6rem',
         width: '100%',
       }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '4rem',
-          alignItems: 'center',
-        }}>
+        <div className="hero-grid">
           {/* Left Content */}
           <div>
             {/* Badge */}
@@ -230,7 +224,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            style={{ display: 'flex', justifyContent: 'flex-end' }}
+            className="hero-photo-right"
           >
             <div style={{ position: 'relative' }}>
               {/* Glow effect */}
@@ -243,16 +237,7 @@ export default function Hero() {
                 transform: 'scale(1.1)',
               }} />
               {/* Photo container */}
-              <div
-                className="liquid-glass-strong"
-                style={{
-                  borderRadius: '9999px',
-                  width: '24rem',
-                  height: '24rem',
-                  overflow: 'hidden',
-                  position: 'relative',
-                }}
-              >
+              <div className="hero-photo-box liquid-glass-strong">
                 <img
                   src="https://i.imgur.com/oZCWCWv.jpeg"
                   alt="Chinonso Egeolu"

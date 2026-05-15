@@ -145,3 +145,131 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
 }
+
+/* ====== RESPONSIVE ====== */
+
+.hero-container {
+  padding: 5rem 6rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-photo-box {
+  border-radius: 9999px;
+  width: 24rem;
+  height: 24rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-photo-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-hire {
+  display: block;
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 0.25rem;
+  flex-shrink: 0;
+}
+
+.mobile-nav-menu {
+  display: none;
+  position: fixed;
+  top: 5rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 49;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobile-nav-menu.open {
+  display: flex;
+}
+
+.mobile-nav-link {
+  padding: 0.625rem 1rem;
+  font-size: 0.9375rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.mobile-nav-hire {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-radius: 9999px;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-photo-box {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .hero-photo-right {
+    justify-content: center;
+    order: -1;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .nav-hire {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
