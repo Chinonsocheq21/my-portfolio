@@ -5,10 +5,26 @@ import { GithubIcon } from './SocialIcons'
 
 const projects = [
   {
+    name: 'Avatar Editor, Rethought',
+    description: 'A self-directed product design case study: blocky-avatar customization rebuilt around outfits instead of body parts. Ships as a working prototype you can actually use — preview without committing, save whole looks, and jump back to any of them in one tap. Includes the heuristic critique, the four design decisions with the tradeoffs each accepts, and an honest note on what still needs real user research.',
+    tech: ['Product Design', 'Interaction Design', 'Prototyping', 'Figma', 'SVG', 'Vanilla JS', 'Accessibility'],
+    github: null,
+    live: 'https://avatar-editor-redesign.unv.run',
+    featured: true,
+    highlights: [
+      'Live interactive prototype — not screenshots of one',
+      'Preview and apply split into separate gestures',
+      'Whole-outfit history replaces per-slot undo',
+      'Each decision paired with what would prove it wrong',
+      'Before/after task analysis: 11+ taps down to 1',
+    ],
+  },
+  {
     name: 'AutoDoctor AI',
     description: 'AI-powered vehicle diagnostic platform using Google Gemini 3.1 Pro for multimodal analysis. Features 3D damage visualization with Three.js, real-time part pricing, and PDF report generation.',
     tech: ['React', 'TypeScript', 'Node.js', 'Three.js', 'Google Gemini AI', 'SQLite', 'OAuth 2.0'],
     github: null,
+    live: null,
     featured: true,
     highlights: [
       'Multimodal AI diagnostic engine via Google Gemini 3.1 Pro',
@@ -23,6 +39,7 @@ const projects = [
     description: 'Fully automated Solana meme coin trading bot deployed as a Tampermonkey browser extension. Intercepts live WebSocket price feeds, runs momentum detection with cooldown logic, and executes buy/sell via Jupiter DEX — targeting 15% TP / 15% SL per position. Includes Sim Mode and Signal Mode.',
     tech: ['JavaScript', 'TypeScript', 'React', 'Solana Web3.js', 'Jupiter DEX API', 'WebSocket', 'Vite', 'Tailwind CSS', 'Phantom Wallet SDK'],
     github: null,
+    live: null,
     featured: false,
     highlights: [
       'On-chain Solana payment verification for lifetime license gating (no backend)',
@@ -36,6 +53,7 @@ const projects = [
     description: 'Comprehensive health platform powered by Google Generative AI and GCP. Generates personalized meal plans and provides AI-driven coaching based on user goals and preferences.',
     tech: ['Python', 'Streamlit', 'GCP', 'BigQuery', 'Generative AI'],
     github: 'https://github.com/Chinonsocheq21',
+    live: null,
     featured: false,
   },
   {
@@ -43,6 +61,7 @@ const projects = [
     description: 'Secure iOS password manager with biometric authentication. Uses CryptoKit for encryption, Keychain for PIN storage, and supports Face ID/Touch ID via LocalAuthentication.',
     tech: ['Swift', 'SwiftUI', 'CryptoKit', 'LocalAuthentication', 'Keychain'],
     github: 'https://github.com/Chinonsocheq21/PassSafe',
+    live: null,
     featured: false,
   },
   {
@@ -50,6 +69,7 @@ const projects = [
     description: 'Clean SwiftUI iOS task manager with a polished UI featuring gradients, shadows, and custom buttons. Tasks persist via JSON with an elegant empty state experience.',
     tech: ['Swift', 'SwiftUI', 'JSON'],
     github: 'https://github.com/Chinonsocheq21/ToDoListApp',
+    live: null,
     featured: false,
   },
 ]
@@ -128,6 +148,30 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                 }}
               >
                 <GithubIcon size={16} /> View on GitHub
+              </a>
+            )}
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="liquid-glass-strong"
+                style={{
+                  borderRadius: '9999px',
+                  padding: '0.625rem 1.25rem',
+                  fontSize: '0.875rem',
+                  fontFamily: "'Barlow', sans-serif",
+                  fontWeight: 500,
+                  color: '#fff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  width: 'fit-content',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s',
+                }}
+              >
+                Open live prototype <ArrowUpRight size={16} />
               </a>
             )}
           </div>
@@ -227,6 +271,27 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)' }}
         >
           <GithubIcon size={14} /> GitHub <ArrowUpRight size={12} />
+        </a>
+      )}
+      {project.live && (
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            color: 'rgba(255,255,255,0.5)',
+            fontSize: '0.875rem',
+            fontFamily: "'Barlow', sans-serif",
+            textDecoration: 'none',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = '#fff' }}
+          onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)' }}
+        >
+          Live demo <ArrowUpRight size={12} />
         </a>
       )}
     </motion.div>
