@@ -3,14 +3,15 @@ import { useRef } from 'react'
 
 const experiences = [
   {
-    company: 'Honda',
-    role: 'Intern',
-    period: 'Present',
+    company: 'American Honda Motor Co.',
+    role: 'Consumer & Dealer Apps Co-Op',
+    period: 'May – Aug 2026',
     location: 'United States',
-    description: 'Currently interning at Honda, contributing to engineering and technology initiatives within one of the world\'s leading automotive manufacturers.',
+    description: 'Software engineering co-op on Honda\'s Consumer & Dealer Apps team, working on the apps Honda customers and dealerships use.',
     points: [
-      'Working on internal engineering and technology projects',
-      'Collaborating with cross-functional teams on innovative solutions',
+      'Built Playwright test automation for consumer and dealer applications',
+      'Wrote API documentation for the team\'s services',
+      'Reviewed app features for CCPA/CPRA privacy compliance',
     ],
     logo: 'H',
     color: 'linear-gradient(135deg, rgba(220,38,38,0.2), rgba(239,68,68,0.15))',

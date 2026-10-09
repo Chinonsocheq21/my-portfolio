@@ -362,3 +362,112 @@ body {
     gap: 1rem;
   }
 }
+
+/* ====== INTRO ====== */
+.intro-root {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: radial-gradient(120% 90% at 30% 20%, #0d0d0f 0%, #000 60%);
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 3.5rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.intro-orb { position: absolute; border-radius: 9999px; pointer-events: none; }
+.intro-orb-a { width: 36rem; height: 36rem; top: -8rem; left: -6rem; background: rgba(255,255,255,0.04); filter: blur(140px); }
+.intro-orb-b { width: 30rem; height: 30rem; bottom: -10rem; right: -4rem; background: rgba(120,160,255,0.05); filter: blur(140px); }
+.intro-top { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; }
+.intro-grid {
+  position: relative; z-index: 2; flex: 1;
+  display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 5rem); align-items: center;
+  max-width: 78rem; width: 100%; margin: 0 auto; padding: 1.5rem 0;
+}
+.intro-stage {
+  position: relative; border-radius: 1.75rem; aspect-ratio: 2 / 3;
+  max-height: 78vh; width: 100%; justify-self: center; overflow: hidden; background: #050505;
+}
+.intro-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.intro-stage-fade { position: absolute; inset: auto 0 0 0; height: 35%; background: linear-gradient(to top, rgba(0,0,0,0.75), transparent); pointer-events: none; }
+.intro-play { position: absolute; inset: 0; display: grid; place-items: center; background: transparent; border: 0; cursor: pointer; }
+.intro-play-ring {
+  width: 4.5rem; height: 4.5rem; border-radius: 9999px; background: #fff; display: grid; place-items: center;
+  box-shadow: 0 0 0 10px rgba(255,255,255,0.12), 0 0 0 22px rgba(255,255,255,0.05);
+  transition: transform 0.25s ease;
+}
+.intro-play:hover .intro-play-ring { transform: scale(1.07); }
+.intro-controls { position: absolute; left: 1rem; right: 1rem; bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.intro-icon {
+  width: 2.25rem; height: 2.25rem; border-radius: 9999px; border: 0; cursor: pointer; flex: none;
+  background: rgba(255,255,255,0.12); color: #fff; display: grid; place-items: center; backdrop-filter: blur(10px);
+}
+.intro-progress { flex: 1; height: 3px; border-radius: 9999px; background: rgba(255,255,255,0.15); overflow: hidden; }
+.intro-progress > div { height: 100%; background: #fff; }
+.intro-eyebrow { color: rgba(255,255,255,0.45); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 1.25rem; }
+.intro-name {
+  font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400;
+  font-size: clamp(3.25rem, 7vw, 6.5rem); line-height: 0.88; letter-spacing: -0.03em; margin: 0 0 1.5rem;
+}
+.intro-sub { color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.6; max-width: 30rem; margin: 0 0 2.25rem; }
+.intro-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.intro-primary {
+  display: inline-flex; align-items: center; gap: 0.6rem; background: #fff; color: #000; border: 0; cursor: pointer;
+  border-radius: 9999px; padding: 0.95rem 1.6rem; font: 500 0.95rem 'Barlow', sans-serif; transition: transform 0.2s ease;
+}
+.intro-primary:hover { transform: translateY(-1px); }
+.intro-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem; color: #fff; text-decoration: none; cursor: pointer; border: 0;
+  border-radius: 9999px; padding: 0.95rem 1.4rem; font: 400 0.95rem 'Barlow', sans-serif;
+}
+.intro-ghost {
+  display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; border: 0; cursor: pointer;
+  color: rgba(255,255,255,0.55); font: 400 0.85rem 'Barlow', sans-serif; padding: 0.5rem 0.25rem;
+}
+.intro-ghost:hover { color: #fff; }
+.intro-talk { display: flex; flex-direction: column; gap: 2rem; }
+.intro-caption { min-height: 9.5rem; }
+.intro-caption.done { min-height: 0; }
+.intro-caption p {
+  margin: 0; font-family: 'Instrument Serif', serif; font-size: clamp(1.6rem, 2.6vw, 2.4rem); line-height: 1.18; letter-spacing: -0.01em;
+}
+.intro-word { color: rgba(255,255,255,0.14); transition: color 0.18s ease; }
+.intro-word.said { color: rgba(255,255,255,0.92); }
+.intro-word.now { color: #fff; text-shadow: 0 0 18px rgba(255,255,255,0.45); }
+.intro-end-line { color: rgba(255,255,255,0.9); font-style: italic; }
+.intro-rail { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.25rem; }
+.intro-beat { display: flex; align-items: center; gap: 0.75rem; opacity: 0.28; transition: opacity 0.4s ease; }
+.intro-beat.on { opacity: 0.75; }
+.intro-beat.live { opacity: 1; }
+.intro-node {
+  flex: none; width: 2rem; height: 2rem; border-radius: 9999px; display: grid; place-items: center;
+  font-size: 0.7rem; letter-spacing: 0.04em; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.7);
+  transition: all 0.35s ease;
+}
+.intro-beat.live .intro-node { background: #fff; color: #000; border-color: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.35); }
+.intro-beat.on:not(.live) .intro-node { border-color: rgba(74,222,128,0.6); color: #4ade80; }
+.intro-beat-text { display: flex; flex-direction: column; line-height: 1.2; }
+.intro-beat-label { font-size: 0.9rem; font-weight: 500; }
+.intro-beat-detail { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+.intro-note { position: relative; z-index: 2; text-align: center; color: rgba(255,255,255,0.28); font-size: 0.72rem; margin: 0; }
+
+@media (max-width: 860px) {
+  .intro-grid { grid-template-columns: 1fr; gap: 1.5rem; align-items: start; padding-top: 1rem; }
+  .intro-stage { aspect-ratio: 4 / 5; max-height: 52vh; max-width: 26rem; }
+  .intro-caption { min-height: 7rem; }
+  .intro-caption p { font-size: 1.45rem; }
+  .intro-rail { grid-template-columns: 1fr 1fr; gap: 0.5rem 0.75rem; }
+  .intro-beat-detail { display: none; }
+  .intro-node { width: 1.6rem; height: 1.6rem; font-size: 0.62rem; }
+  .intro-name { font-size: 3.25rem; }
+}
+
+.hero-watch {
+  display: inline-flex; align-items: center; gap: 0.6rem; background: transparent; border: 0; cursor: pointer; padding: 0;
+  color: rgba(255,255,255,0.75); font: 400 0.875rem 'Barlow', sans-serif;
+}
+.hero-watch:hover { color: #fff; }
+.hero-watch-dot { width: 2.25rem; height: 2.25rem; border-radius: 9999px; display: grid; place-items: center; }

@@ -36,7 +36,7 @@ const projects = [
   },
   {
     name: 'Axiom Sniper',
-    description: 'Fully automated Solana meme coin trading bot deployed as a Tampermonkey browser extension. Intercepts live WebSocket price feeds, runs momentum detection with cooldown logic, and executes buy/sell via Jupiter DEX — targeting 15% TP / 15% SL per position. Includes Sim Mode and Signal Mode.',
+    description: 'Fully automated Solana meme coin trading bot deployed as a Tampermonkey browser extension. Intercepts live WebSocket price feeds, runs momentum detection with cooldown logic, and executes buy/sell via Jupiter DEX, targeting 15% TP / 15% SL per position. Includes Sim Mode and Signal Mode.',
     tech: ['JavaScript', 'TypeScript', 'React', 'Solana Web3.js', 'Jupiter DEX API', 'WebSocket', 'Vite', 'Tailwind CSS', 'Phantom Wallet SDK'],
     github: null,
     live: null,
@@ -321,7 +321,7 @@ export default function Projects() {
             marginTop: '1rem',
             maxWidth: '32rem',
           }}>
-            From AI-powered diagnostics to iOS apps — here's a selection of projects that showcase my range and passion for building.
+            From AI-powered diagnostics to iOS apps, here's a selection of projects that showcase my range and passion for building.
           </p>
         </motion.div>
 

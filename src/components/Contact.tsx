@@ -61,7 +61,7 @@ export default function Contact() {
             marginRight: 'auto',
           }}
         >
-          I'm currently open to internships, research opportunities, and interesting project collaborations. Let's connect!
+          I'm graduating in Fall 2026 and open to full-time software engineer and AI engineer roles. I also take on freelance builds. Let's connect!
         </motion.p>
 
         <motion.div

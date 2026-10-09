@@ -34,7 +34,7 @@ export default function About() {
                 My journey has taken me from research labs studying climate change patterns with LSTM neural networks, to Google's prestigious Tech Exchange program where I honed my skills in data structures, algorithms, and product development alongside 179 other top students.
               </p>
               <p>
-                I build intelligent applications that bridge the gap between cutting-edge AI and real-world user needs — from AI-powered vehicle diagnostics to health & fitness platforms powered by Generative AI.
+                I build intelligent applications that bridge the gap between cutting-edge AI and real-world user needs, from AI-powered vehicle diagnostics to health & fitness platforms powered by Generative AI.
               </p>
             </div>
 

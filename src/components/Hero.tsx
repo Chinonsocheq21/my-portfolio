@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Play } from 'lucide-react'
+import { OPEN_INTRO_EVENT } from './Intro'
 import BlurText from './BlurText'
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons'
 
@@ -67,7 +68,7 @@ export default function Hero() {
                   display: 'inline-block',
                   animation: 'pulse 2s infinite',
                 }} />
-                Available for opportunities
+                Open to full-time SWE / AI roles · Graduating Fall 2026
               </span>
             </motion.div>
 
@@ -99,7 +100,7 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              Hi, I'm <span style={{ color: '#fff', fontWeight: 500 }}>Chinonso Egeolu</span> — a Software Engineer & AI/ML Developer based in Baltimore, MD. I build intelligent applications that solve real problems.
+              Hi, I'm <span style={{ color: '#fff', fontWeight: 500 }}>Chinonso Egeolu</span>, a Software Engineer & AI/ML Developer based in Baltimore, MD. I build intelligent applications that solve real problems.
             </motion.p>
 
             <motion.p
@@ -159,6 +160,16 @@ export default function Hero() {
               >
                 Get In Touch
               </a>
+              <button
+                className="hero-watch"
+                onClick={() => window.dispatchEvent(new Event(OPEN_INTRO_EVENT))}
+                style={{ marginLeft: '0.5rem' }}
+              >
+                <span className="hero-watch-dot liquid-glass">
+                  <Play size={13} fill="#fff" />
+                </span>
+                Watch my intro
+              </button>
             </motion.div>
 
             {/* Social Links */}
@@ -239,7 +250,7 @@ export default function Hero() {
               {/* Photo container */}
               <div className="hero-photo-box liquid-glass-strong">
                 <img
-                  src="https://i.imgur.com/oZCWCWv.jpeg"
+                  src="/chinonso.jpg"
                   alt="Chinonso Egeolu"
                   style={{
                     width: '100%',
