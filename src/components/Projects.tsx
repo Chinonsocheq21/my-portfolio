@@ -6,13 +6,13 @@ import { GithubIcon } from './SocialIcons'
 const projects = [
   {
     name: 'Avatar Editor, Rethought',
-    description: 'A self-directed product design case study: blocky-avatar customization rebuilt around outfits instead of body parts. Ships as a working prototype you can actually use — preview without committing, save whole looks, and jump back to any of them in one tap. Includes the heuristic critique, the four design decisions with the tradeoffs each accepts, and an honest note on what still needs real user research.',
+    description: 'A self-directed product design case study: blocky-avatar customization rebuilt around outfits instead of body parts. Ships as a working prototype you can actually use: preview without committing, save whole looks, and jump back to any of them in one tap. Includes the heuristic critique, the four design decisions with the tradeoffs each accepts, and an honest note on what still needs real user research.',
     tech: ['Product Design', 'Interaction Design', 'Prototyping', 'Figma', 'SVG', 'Vanilla JS', 'Accessibility'],
     github: null,
     live: 'https://avatar-editor-redesign.unv.run',
     featured: true,
     highlights: [
-      'Live interactive prototype — not screenshots of one',
+      'Live interactive prototype, not screenshots of one',
       'Preview and apply split into separate gestures',
       'Whole-outfit history replaces per-slot undo',
       'Each decision paired with what would prove it wrong',
